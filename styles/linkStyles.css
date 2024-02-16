@@ -1,0 +1,202 @@
+/* CSS */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../assets/cork.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* CSS */
+.bulletin-board {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .flyer {
+    width: 80%;
+    margin: 25px;
+    padding: 20px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 10);
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: flex; /* Add this line */
+    align-items: center; /* Add this line */
+    justify-content: center;
+    transform:rotate(-4deg);
+    font-size: 40px; /* Adjust as needed */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+
+  .flyer.share{
+    margin-top: 40px;
+    transform:rotate(0);
+    width: 40%;
+  }
+  
+  
+  /* Add these classes for the favicons 
+  .instagram::before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url('instagram-icon.png') no-repeat center center; 
+    background-size: contain;
+    margin-right: 10px;
+  }
+  
+  .linkedin::before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url('../assets/linkedinfavicon.png') no-repeat center center; 
+    background-size: contain;
+    margin-right: 10px;
+  }
+  
+  .github::before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url('../assets/githubfavicon.png') no-repeat center center; 
+    background-size: contain;
+    margin-right: 10px;
+  }
+  
+  .portfolio::before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: url('../assets/portfoliofavicon.png') no-repeat center center; 
+    background-size: contain;
+    margin-right: 10px;
+  }
+  */
+  
+  /* Add this media query */
+  @media (min-width: 600px) {
+    .flyer {
+      width: 80%;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .flyer {
+      width: 80%;
+    }
+  }
+
+.flyer:hover {
+    transform: scale(1.05);
+}
+
+.tack {
+  width:30px;
+  margin:0 auto;
+  display:block;
+  margin-top:10px;
+}
+
+.larger {
+  width:40px;
+}
+
+.note-four {
+  background-color:lightyellow;
+  width:250px;
+  height:140px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tape {
+  width:110px;
+  margin-top:-115px;
+  margin-left:-20px;
+  transform:rotate(5deg);
+}
+
+.name-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.name {
+  font-size: 24px; /* Adjust as needed */
+  font-family: 'Permanent Marker', cursive;
+}
+
+.occupation {
+  font-size: 15px; /* Adjust as needed */
+  font-family: 'Permanent Marker', cursive;
+}
+
+/* CSS */
+#toast {
+  visibility: hidden;
+  min-width: 150px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  margin-left: -75px;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
